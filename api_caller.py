@@ -5,6 +5,7 @@ from pkmn import Pokemon
 MY_API = ''
 FRIEND_API = ''
 
+# This code they react 
 def extract_pkmn(api_url:str) -> Pokemon:
 
     # This code they will have to implement

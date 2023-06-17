@@ -10,12 +10,14 @@ class Pokemon():
         self.curr_hp = max(0, self.curr_hp - int(dmg))
 
     # Initialises the Pokemon class from a json file
+    # STUDENTS WRITE THIS BIT OF CODE
     def __init__(self, pkmnInfo: json) -> None:
 
         # Pokemon can have at most 2 types and 4 moves
         assert(len(pkmnInfo['types']) <= 2)
         assert(len(pkmnInfo['moves']) <= 4)
 
+        # Use blank pokemon card analogy, and populating it with information to be ready to use and play
         # Sets the elements from the JSON file
         self.pokemon = pkmnInfo['pokemon']
         self.nickname = pkmnInfo['nickname']
@@ -23,6 +25,7 @@ class Pokemon():
         self.types = pkmnInfo['types']
         self.number = pkmnInfo['dex num']
 
+        # Jeslyn to explain accessing multiple keys inside a json data file
         # Needs to access a nested JSON element
         self.curr_hp = pkmnInfo['stats']['hp']
 
