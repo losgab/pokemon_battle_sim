@@ -10,32 +10,36 @@ class Pokemon():
         self.curr_hp = max(0, self.curr_hp - int(dmg))
 
     # Initialises the Pokemon class from a json file
-    # STUDENTS WRITE THIS BIT OF CODE
+    ### THIS FUNCTION IS FOR YOU TO COMPLETE ###
     def __init__(self, pkmnInfo: json) -> None:
 
-        # Pokemon can have at most 2 types and 4 moves
-        assert(len(pkmnInfo['types']) <= 2)
-        assert(len(pkmnInfo['moves']) <= 4)
+        ### POKEMON CHECKING ###
+        
+        # ----Your code here---- #
+        
+        
+        
+        
 
-        # Use blank pokemon card analogy, and populating it with information to be ready to use and play
-        # Sets the elements from the JSON file
-        self.pokemon = pkmnInfo['pokemon']
-        self.nickname = pkmnInfo['nickname']
-        self.trainer = pkmnInfo['trainer']
-        self.types = pkmnInfo['types']
-        self.number = pkmnInfo['dex num']
+        ### STANDARD FIELDS ### (Populating the blank Pokemon card)
 
-        # Jeslyn to explain accessing multiple keys inside a json data file
-        # Needs to access a nested JSON element
-        self.curr_hp = pkmnInfo['stats']['hp']
+        # ----Your code here---- #
 
-        # Call the constructor from stats
-        self.stats = Stats(pkmnInfo['stats'])
 
-        # Initialise a list of moves
-        self.moves = []
-        # For each move in the JSON file use the JSON to form a move object and append it in
-        for move_json in pkmnInfo['moves']:
-            move = Move(move_json)
-            self.moves.append(move)
+
+
+        ### SPECIAL FIELDS ### 
+        
+        # Stats object will help us handle and process the data
+        # (Fill in the blank)
+        self.stats = Stats()
+
+        # Initialise a list of moves that your pokemon can make (think about Python lists)
+        
+        # ----Your code here---- #
+        
+        # For each move in the JSON file use the info to make a move object and append it to the pokemon
+        # HINT: Use a for loop ;)
+        
+        # ----Your code here---- #
     
